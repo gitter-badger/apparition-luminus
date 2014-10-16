@@ -1,7 +1,9 @@
 (ns apparition.routes.home
   (:require [compojure.core :refer :all]
             [apparition.layout :as layout]
-            [apparition.util :as util]))
+            [apparition.util :as util]
+            [hiccup.core :refer :all]
+            [apparition.templates :as pages]))
 
 (defn home-page []
   (layout/render
@@ -12,4 +14,5 @@
 
 (defroutes home-routes
   (GET "/" [] (home-page))
-  (GET "/about" [] (about-page)))
+  (GET "/about" [] (about-page))
+  (GET "/some" [] (pages/some-page)))

@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="Clojure" name="Clojure">
+      <configuration />
+    </facet>
+  </component>
   <component name="NewModuleRootManager" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
@@ -104,6 +109,7 @@
     <orderEntry type="library" scope="TEST" name="Maven: clojure-complete:clojure-complete:0.2.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: ring-mock:ring-mock:0.1.5" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: pjstadig:humane-test-output:0.6.0" level="project" />
+    <orderEntry type="library" name="Maven: org.clojure:clojure:1.6.0" level="project" />
   </component>
 </module>
 
