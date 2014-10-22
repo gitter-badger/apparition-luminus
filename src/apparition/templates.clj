@@ -5,6 +5,8 @@
             [hiccup.page :refer :all]
             [apparition.util :refer [md->html]]))
 
+(defn boots-theme [theme]  (str "//bootswatch.com/" theme "/bootstrap.min.css"))
+
 (defn base [template & [params]] (html5
   [:head 
     [:title "Welcome to apparition" ]]
@@ -20,7 +22,7 @@
                 [:a {:href (str "/" sub)} text]]))]]]]
     [:div.container template]
     (include-css  "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
-                  "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css")
+                  (boots-theme "darkly"))
     (include-js   "//code.jquery.com/jquery-2.1.1.min.js"
                   "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")]))
 
@@ -28,10 +30,9 @@
   [:div
     [:div.jumbotron
       [:h1 "Welcome to apparition"]
-      [:p "Time to start building my site"]
-      [:p [:a.btn.btn-primary.btn-lg {:href "http://luminusweb.net"} "Learn more &raquo;"]]]
-    (md->html "/md/docs.md")]
+      [:p "The transient text board"]]
+    (md->html "/md/home.md")]
   params))
 
-(defn ^{:menu :about} about[& [params]] (base [:p "this is the story of apparition... work in progress"] params))
+(defn ^{:menu :about} about[& [params]] (base (md->html "/md/about.md") params))
 

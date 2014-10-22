@@ -1,0 +1,1 @@
+Apparition is an attempt as full no-persistent-database board
