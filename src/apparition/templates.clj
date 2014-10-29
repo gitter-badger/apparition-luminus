@@ -5,7 +5,7 @@
             [hiccup.page :refer :all]
             [apparition.util :refer [md->html]]))
 
-(defn boots-theme [theme]  (str "//bootswatch.com/" theme "/bootstrap.min.css"))
+(defn boots-theme [theme]  (str "/themes/" theme ".min.css"))
 
 (defn base [template & [params]] (html5
   [:head 
@@ -22,7 +22,7 @@
                 [:a {:href (str "/" sub)} text]]))]]]]
     [:div.container template]
     (include-css  "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
-                  (boots-theme "darkly"))
+                  (boots-theme "slate"))
     (include-js   "//code.jquery.com/jquery-2.1.1.min.js"
                   "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")]))
 
